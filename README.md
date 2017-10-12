@@ -1,5 +1,5 @@
 # Udacity Self Driving Car Nanodegree
-## P2 - Build a Traffic Sign Recognition Program
+## Build a Traffic Sign Recognition Program
 
 ### Overview
 This is a project for Udacity's Self Driving Car Nanodegree. The objective is to train a  convolutional neural network for classification of traffic signs.
