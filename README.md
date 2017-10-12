@@ -64,6 +64,10 @@ $ source deactivate traffic-sign
 
 ### How to run
 
+Download the [pickled dataset](https://d17h27t6h515a5.cloudfront.net/topher/2017/February/5898cd6f_traffic-signs-data/traffic-signs-data.zip), which images have already been resized to 32x32. 
+
+Extract the `train.p`, `valid.p` and `test.p` files from the dataset zip file to the path `./traffic-signs-data/`
+
 You can step through the Jupyter Notebook at `Traffic_Signs_Recognition.ipynb`, or you can read the HTML export of the notebook at `Traffic_Signs_Recognition.html`.
 
 ### Final report
