@@ -13,12 +13,8 @@ This is a project for Udacity's Self Driving Car Nanodegree. The objective is to
 - matplotlib
 - jupyter
 - tensorflow==0.12.1
-- opencv3
-- pillow
 - scikit-learn
 - scipy
-- h5py
-- seaborn
 - pandas
 
 ### Installation
