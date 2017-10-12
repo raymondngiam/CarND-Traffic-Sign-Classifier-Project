@@ -64,7 +64,7 @@ Download the [pickled GTSRB dataset](https://d17h27t6h515a5.cloudfront.net/tophe
 
 Extract the `train.p`, `valid.p` and `test.p` files from the dataset zip file to the path `./traffic-signs-data/`
 
-You can step through the Jupyter Notebook at [Traffic_Signs_Recognition.ipynb](https://github.com/raymondngiam/CarND-Traffic-Sign-Classifier-Project/blob/master/Traffic_Sign_Classifier.ipynb), or you can read the HTML export of the notebook at [Traffic_Signs_Recognition.html](https://github.com/raymondngiam/CarND-Traffic-Sign-Classifier-Project/blob/master/Traffic_Sign_Classifier.html).
+You can step through the Jupyter Notebook at [Traffic_Signs_Recognition.ipynb](https://github.com/raymondngiam/CarND-Traffic-Sign-Classifier-Project/blob/master/Traffic_Sign_Classifier.ipynb).
 
 ### Final report
 
