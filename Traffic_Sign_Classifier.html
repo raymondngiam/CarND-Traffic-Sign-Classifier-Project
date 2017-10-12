@@ -17830,13 +17830,11 @@ Loading done.
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><font color='blue'>
-Next, we will generate additional variations of the existing training samples to ensure the class labels are balanced.<br>
+<p><font color='blue'>Next, we will generate additional variations of the existing training samples to ensure the class labels are balanced.<br>
 <br>
 We will be using 8 possible translations (NW, N, NE, E, SE, S, SW, and W) and 2 possible rotations (+8 degree and -8 degree), hence each image can have up to 8x2=16 variations.<br>
 <br>
-For each class label, we will sample randomly from existing images and apply the transformations with also random configurations (i.e. translation direction and rotation angles). We will continue the sampling until the 'replicateCount' for each class label is reached.</p>
-<p>&lt;/font&gt;</p>
+For each class label, we will sample randomly from existing images and apply the transformations with also random configurations (i.e. translation direction and rotation angles). We will continue the sampling until the 'replicateCount' for each class label is reached.</font></p>
 
 </div>
 </div>
@@ -20440,7 +20438,7 @@ wNk2q3kTAAAAAElFTkSuQmCC
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><figure>
- <img src="./tensorboard/graph_run=.png" width="720" alt="Combined Image" />
+ <img src="./tensorboard/graph_run=.png" width="720" alt="Model graph" />
  <figcaption>
  <p></p> 
  <p style="text-align: center;"> Visualization of the network using Tensorboard.</p> 
@@ -25641,9 +25639,11 @@ OIdE2BMEQRAEQRAEQTiHRNgTBEEQBEEQBEE4h/4v7AxpKC5TbjYAAAAASUVORK5CYII=
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">### Run the predictions here and use the model to output the prediction for each image.</span>
 <span class="c1">### Make sure to pre-process the images with the same pre-processing pipeline used earlier.</span>
 <span class="c1">### Feel free to use as many code cells as needed.</span>
-<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;./test-images/labelmap.p&#39;</span><span class="p">,</span> <span class="s1">&#39;rb&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
-    <span class="n">labelmap</span> <span class="o">=</span> <span class="n">pickle</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
-<span class="n">labelmap</span>
+<span class="n">testWebLabels</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;./test-images/labelmap.csv&quot;</span><span class="p">)</span>
+<span class="n">display</span><span class="p">(</span><span class="n">HTML</span><span class="p">(</span><span class="n">testWebLabels</span><span class="o">.</span><span class="n">to_html</span><span class="p">(</span><span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">)))</span>
+<span class="n">testWebFileName</span><span class="o">=</span><span class="n">testWebLabels</span><span class="p">[</span><span class="s1">&#39;Image Name&#39;</span><span class="p">]</span>
+<span class="n">testWebIdx</span><span class="o">=</span><span class="n">testWebLabels</span><span class="p">[</span><span class="s1">&#39;Label Index&#39;</span><span class="p">]</span>
+<span class="n">labelmap</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="nb">zip</span><span class="p">(</span><span class="n">testWebFileName</span><span class="p">,</span><span class="n">testWebIdx</span><span class="p">))</span>
 </pre></div>
 
 </div>
@@ -25656,17 +25656,41 @@ OIdE2BMEQRAEQRAEQTiHRNgTBEEQBEEQBEE4h/4v7AxpKC5TbjYAAAAASUVORK5CYII=
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[54]:</div>
+<div class="prompt"></div>
 
 
 
-
-<div class="output_text output_subarea output_execute_result">
-<pre>{&#39;Children crossing cropped.jpg&#39;: 28,
- &#39;General caution cropped.jpg&#39;: 18,
- &#39;Slippery road cropped.jpg&#39;: 23,
- &#39;Speed limit 70 cropped.jpg&#39;: 4,
- &#39;Yield cropped.jpg&#39;: 13}</pre>
+<div class="output_html rendered_html output_subarea ">
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>Image Name</th>
+      <th>Label Index</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Children crossing cropped.jpg</td>
+      <td>28</td>
+    </tr>
+    <tr>
+      <td>General caution cropped.jpg</td>
+      <td>18</td>
+    </tr>
+    <tr>
+      <td>Slippery road cropped.jpg</td>
+      <td>23</td>
+    </tr>
+    <tr>
+      <td>Speed limit 70 cropped.jpg</td>
+      <td>4</td>
+    </tr>
+    <tr>
+      <td>Yield cropped.jpg</td>
+      <td>13</td>
+    </tr>
+  </tbody>
+</table>
 </div>
 
 </div>
