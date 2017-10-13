@@ -20178,10 +20178,13 @@ wNk2q3kTAAAAAElFTkSuQmCC
 <span class="n">BATCH_SIZE</span> <span class="o">=</span> <span class="mi">128</span>
 <span class="n">HYPERPARAM_ITER_MAX</span> <span class="o">=</span> <span class="mi">30</span>
 
-<span class="c1"># Arguments used for tf.truncated_normal, randomly defines variables for the weights and biases for each layer</span>
+<span class="c1"># Arguments used for weights initialization with tf.truncated_normal, </span>
+<span class="c1"># randomly defines variables for the weights for each layer</span>
 <span class="n">mu</span> <span class="o">=</span> <span class="mi">0</span>
 <span class="n">sigma</span> <span class="o">=</span> <span class="mf">0.1</span>
 
+<span class="c1"># Hyper parameter for F-beta score</span>
+<span class="c1"># beta = 1 weighs precision and recall equally</span>
 <span class="n">beta</span> <span class="o">=</span> <span class="mi">1</span>
 </pre></div>
 
