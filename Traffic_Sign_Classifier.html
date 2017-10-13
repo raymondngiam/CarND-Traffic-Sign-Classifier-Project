@@ -11775,24 +11775,7 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Self-Driving-Car-Engineer-Nanodegree">Self-Driving Car Engineer Nanodegree<a class="anchor-link" href="#Self-Driving-Car-Engineer-Nanodegree">&#182;</a></h1><h2 id="Deep-Learning">Deep Learning<a class="anchor-link" href="#Deep-Learning">&#182;</a></h2><h2 id="Project:-Build-a-Traffic-Sign-Recognition-Classifier">Project: Build a Traffic Sign Recognition Classifier<a class="anchor-link" href="#Project:-Build-a-Traffic-Sign-Recognition-Classifier">&#182;</a></h2><p>In this notebook, a template is provided for you to implement your functionality in stages, which is required to successfully complete this project. If additional code is required that cannot be included in the notebook, be sure that the Python code is successfully imported and included in your submission if necessary.</p>
-<blockquote><p><strong>Note</strong>: Once you have completed all of the code implementations, you need to finalize your work by exporting the iPython Notebook as an HTML document. Before exporting the notebook to html, all of the code cells need to have been run so that reviewers can see the final implementation and output. You can then export the notebook by using the menu above and navigating to  \n",
-    "<strong>File -&gt; Download as -&gt; HTML (.html)</strong>. Include the finished document along with this notebook as your submission.</p>
-</blockquote>
-<p>In addition to implementing code, there is a writeup to complete. The writeup should be completed in a separate file, which can be either a markdown file or a pdf document. There is a <a href="https://github.com/udacity/CarND-Traffic-Sign-Classifier-Project/blob/master/writeup_template.md">write up template</a> that can be used to guide the writing process. Completing the code template and writeup template will cover all of the <a href="https://review.udacity.com/#!/rubrics/481/view">rubric points</a> for this project.</p>
-<p>The <a href="https://review.udacity.com/#!/rubrics/481/view">rubric</a> contains "Stand Out Suggestions" for enhancing the project beyond the minimum requirements. The stand out suggestions are optional. If you decide to pursue the "stand out suggestions", you can include the code in this Ipython notebook and also discuss the results in the writeup file.</p>
-<blockquote><p><strong>Note:</strong> Code and Markdown cells can be executed using the <strong>Shift + Enter</strong> keyboard shortcut. In addition, Markdown cells can be edited by typically double-clicking the cell to enter edit mode.</p>
-</blockquote>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<hr>
-<h2 id="Step-0:-Load-The-Data">Step 0: Load The Data<a class="anchor-link" href="#Step-0:-Load-The-Data">&#182;</a></h2>
+<h1 id="Self-Driving-Car-Engineer-Nanodegree">Self-Driving Car Engineer Nanodegree<a class="anchor-link" href="#Self-Driving-Car-Engineer-Nanodegree">&#182;</a></h1><h2 id="Deep-Learning">Deep Learning<a class="anchor-link" href="#Deep-Learning">&#182;</a></h2><h2 id="Project:-Build-a-Traffic-Sign-Recognition-Classifier">Project: Build a Traffic Sign Recognition Classifier<a class="anchor-link" href="#Project:-Build-a-Traffic-Sign-Recognition-Classifier">&#182;</a></h2>
 </div>
 </div>
 </div>
@@ -11829,14 +11812,21 @@ div#notebook {
 </div>
 
 </div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<hr>
+<h2 id="Step-0:-Load-The-Data">Step 0: Load The Data<a class="anchor-link" href="#Step-0:-Load-The-Data">&#182;</a></h2>
+</div>
+</div>
+</div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[2]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># TODO: Fill this in based on where you saved the training and testing data</span>
-
-<span class="n">training_file</span> <span class="o">=</span> <span class="s1">&#39;traffic-signs-data/train.p&#39;</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">training_file</span> <span class="o">=</span> <span class="s1">&#39;traffic-signs-data/train.p&#39;</span>
 <span class="n">validation_file</span><span class="o">=</span> <span class="s1">&#39;traffic-signs-data/valid.p&#39;</span>
 <span class="n">testing_file</span> <span class="o">=</span> <span class="s1">&#39;traffic-signs-data/test.p&#39;</span>
 
@@ -11869,7 +11859,6 @@ div#notebook {
 <li><code>'sizes'</code> is a list containing tuples, (width, height) representing the original width and height the image.</li>
 <li><code>'coords'</code> is a list containing tuples, (x1, y1, x2, y2) representing coordinates of a bounding box around the sign in the image. <strong>THESE COORDINATES ASSUME THE ORIGINAL IMAGE. THE PICKLED DATA CONTAINS RESIZED VERSIONS (32 by 32) OF THESE IMAGES</strong></li>
 </ul>
-<p>Complete the basic data summary below. Use python, numpy and/or pandas methods to calculate the data summary rather than hard coding the results. For example, the <a href="http://pandas.pydata.org/pandas-docs/stable/generated/pandas.DataFrame.shape.html">pandas shape method</a> might be useful for calculating some of the summary results.</p>
 
 </div>
 </div>
@@ -11878,7 +11867,7 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Provide-a-Basic-Summary-of-the-Data-Set-Using-Python,-Numpy-and/or-Pandas">Provide a Basic Summary of the Data Set Using Python, Numpy and/or Pandas<a class="anchor-link" href="#Provide-a-Basic-Summary-of-the-Data-Set-Using-Python,-Numpy-and/or-Pandas">&#182;</a></h3>
+<h3 id="Basic-Summary-of-the-Dataset">Basic Summary of the Dataset<a class="anchor-link" href="#Basic-Summary-of-the-Dataset">&#182;</a></h3>
 </div>
 </div>
 </div>
@@ -11994,27 +11983,7 @@ Number of classes = 43
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Include-an-exploratory-visualization-of-the-dataset">Include an exploratory visualization of the dataset<a class="anchor-link" href="#Include-an-exploratory-visualization-of-the-dataset">&#182;</a></h3>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Visualize the German Traffic Signs Dataset using the pickled file(s). This is open ended, suggestions include: plotting traffic sign images, plotting the count of each sign, etc.</p>
-<p>The <a href="http://matplotlib.org/">Matplotlib</a> <a href="http://matplotlib.org/examples/index.html">examples</a> and <a href="http://matplotlib.org/gallery.html">gallery</a> pages are a great resource for doing visualizations in Python.</p>
-<p><strong>NOTE:</strong> It's recommended you start with something simple first. If you wish to do more, come back to it after you've completed the rest of the sections. It can be interesting to look at the distribution of classes in the training, validation and test set. Is the distribution the same? Are there more examples of some classes than others?</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p><font color='blue'>Display one of the images in each class label of the training set.</font></p>
-
+<h3 id="Display-one-of-the-images-in-each-class-label-of-the-training-set.">Display one of the images in each class label of the training set.<a class="anchor-link" href="#Display-one-of-the-images-in-each-class-label-of-the-training-set.">&#182;</a></h3>
 </div>
 </div>
 </div>
@@ -14856,8 +14825,7 @@ AAAAgIZwEw4AAAAAQEO4CQcAAAAAoCHchAMAAAAA0JD/A1CkAs/li5V0AAAAAElFTkSuQmCC
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><font color='blue'>Visualize in sample size of each class label.</font></p>
-
+<h3 id="Visualize-in-sample-size-of-each-class-label.">Visualize in sample size of each class label.<a class="anchor-link" href="#Visualize-in-sample-size-of-each-class-label.">&#182;</a></h3>
 </div>
 </div>
 </div>
@@ -15679,18 +15647,7 @@ f8e4pkJrFIJ/AAAAAElFTkSuQmCC
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <hr>
-<h2 id="Step-2:-Design-and-Test-a-Model-Architecture">Step 2: Design and Test a Model Architecture<a class="anchor-link" href="#Step-2:-Design-and-Test-a-Model-Architecture">&#182;</a></h2><p>Design and implement a deep learning model that learns to recognize traffic signs. Train and test your model on the <a href="http://benchmark.ini.rub.de/?section=gtsrb&amp;subsection=dataset">German Traffic Sign Dataset</a>.</p>
-<p>The LeNet-5 implementation shown in the <a href="https://classroom.udacity.com/nanodegrees/nd013/parts/fbf77062-5703-404e-b60c-95b78b2f3f9e/modules/6df7ae49-c61c-4bb2-a23e-6527e69209ec/lessons/601ae704-1035-4287-8b11-e2c2716217ad/concepts/d4aca031-508f-4e0b-b493-e7b706120f81">classroom</a> at the end of the CNN lesson is a solid starting point. You'll have to change the number of classes and possibly the preprocessing, but aside from that it's plug and play!</p>
-<p>With the LeNet-5 solution from the lecture, you should expect a validation set accuracy of about 0.89. To meet specifications, the validation set accuracy will need to be at least 0.93. It is possible to get an even higher accuracy, but 0.93 is the minimum for a successful project submission.</p>
-<p>There are various aspects to consider when thinking about this problem:</p>
-<ul>
-<li>Neural network architecture (is the network over or underfitting?)</li>
-<li>Play around preprocessing techniques (normalization, rgb to grayscale, etc)</li>
-<li>Number of examples per label (some have more than others).</li>
-<li>Generate fake data.</li>
-</ul>
-<p>Here is an example of a <a href="http://yann.lecun.com/exdb/publis/pdf/sermanet-ijcnn-11.pdf">published baseline model on this problem</a>. It's not required to be familiar with the approach used in the paper but, it's good practice to try to read papers like these.</p>
-
+<h2 id="Step-2:-Design-and-Test-a-Model-Architecture">Step 2: Design and Test a Model Architecture<a class="anchor-link" href="#Step-2:-Design-and-Test-a-Model-Architecture">&#182;</a></h2>
 </div>
 </div>
 </div>
@@ -15698,7 +15655,7 @@ f8e4pkJrFIJ/AAAAAElFTkSuQmCC
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Pre-process-the-Data-Set-(normalization,-grayscale,-etc.)">Pre-process the Data Set (normalization, grayscale, etc.)<a class="anchor-link" href="#Pre-process-the-Data-Set-(normalization,-grayscale,-etc.)">&#182;</a></h3>
+<h3 id="Data-preprocessing">Data preprocessing<a class="anchor-link" href="#Data-preprocessing">&#182;</a></h3>
 </div>
 </div>
 </div>
@@ -15706,27 +15663,8 @@ f8e4pkJrFIJ/AAAAAElFTkSuQmCC
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Minimally, the image data should be normalized so that the data has mean zero and equal variance. For image data, <code>(pixel - 128)/ 128</code> is a quick way to approximately normalize the data and can be used in this project.</p>
-<p>Other pre-processing steps are optional. You can try different techniques to see if it improves performance.</p>
-<p>Use the code cell (or multiple code cells, if necessary) to implement the first step of your project.</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p><font color='blue'>From the visualization of the sample size of each class label, we observed there is a huge imbalance in sample size among the classes.</font></p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p><font color='blue'>First, we determine the lack of samples for each label class relative to the class with the highest number of samples.</font></p>
+<p>From the visualization of the sample size of each class label, we observed there is a huge imbalance in sample size among the classes.</p>
+<p>First, we determine the lack of samples for each label class relative to the class with the highest number of samples.</p>
 
 </div>
 </div>
@@ -16107,7 +16045,7 @@ f8e4pkJrFIJ/AAAAAElFTkSuQmCC
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><font color='blue'>Then we will define the data preprocessing pipeline.</font></p>
+<p>Then we will define the data preprocessing pipeline.</p>
 
 </div>
 </div>
@@ -16116,7 +16054,7 @@ f8e4pkJrFIJ/AAAAAElFTkSuQmCC
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><font color='blue'>1. Convert color images into grayscale images.</font></p>
+<p>1) Convert color images into grayscale images.</p>
 
 </div>
 </div>
@@ -16407,7 +16345,7 @@ gg==
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><font color='blue'>2. Introduce slight translations in the images. The images are offset by two pixels relative to the image center in one of the eight directions, i.e. NW, N, NE, E, SE, S, SW, and W.</font></p>
+<p>2) Introduce slight translations in the images. The images are offset by two pixels relative to the image center in one of the eight directions, i.e. NW, N, NE, E, SE, S, SW, and W.</p>
 
 </div>
 </div>
@@ -16980,7 +16918,7 @@ w0YNAAAAAArDRg0AAAAACsNGDQAAAAAKw0YNAAAAAArzH7FOOQkThjOCAAAAAElFTkSuQmCC
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><font color='blue'>3. Introduce slight rotations in the images. Typical rotations to be introduced here are +8 degree or -8 degree.</font></p>
+<p>3) Introduce slight rotations in the images. Typical rotations to be introduced here are +8 degree or -8 degree.</p>
 
 </div>
 </div>
@@ -17297,7 +17235,7 @@ LNQAAAAAIDMs1AAAAAAgMyzUAAAAACAz/wemXk9H8BxpuAAAAABJRU5ErkJggg==
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><font color='blue'>4. Normalize the image to have mean 0 and standard deviation 1.</font></p>
+<p>4) Normalize the image to have mean 0 and standard deviation 1.</p>
 
 </div>
 </div>
@@ -17658,7 +17596,7 @@ JEmSJHWQxaAkSZIkdZDFoCRJkiR1kMWgJEmSJHXQ/wfzjagFtKPjvgAAAABJRU5ErkJggg==
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><font color='blue'>With the preprocessing pipeline defined, we will first preprocessing the original training data without any translation or rotation.</font></p>
+<p>With the preprocessing pipeline defined, we will first preprocessing the original dataset without any translation or rotation.</p>
 
 </div>
 </div>
@@ -17836,11 +17774,9 @@ Loading done.
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><font color='blue'>Next, we will generate additional variations of the existing training samples to ensure the class labels are balanced.<br>
-<br>
-We will be using 8 possible translations (NW, N, NE, E, SE, S, SW, and W) and 2 possible rotations (+8 degree and -8 degree), hence each image can have up to 8x2=16 variations.<br>
-<br>
-For each class label, we will sample randomly from existing images and apply the transformations with also random configurations (i.e. translation direction and rotation angles). We will continue the sampling until the 'replicateCount' for each class label is reached.</font></p>
+<p>Next, we will generate additional variations for the training set to ensure the class labels are balanced.</p>
+<p>We will be using 8 possible translations (NW, N, NE, E, SE, S, SW, and W) and 2 possible rotations (+8 degree and -8 degree), hence each image can have up to 8x2=16 variations.</p>
+<p>For each class label, we will sample randomly from existing images and apply the transformations with also random configurations (i.e. translation direction and rotation angles). We will continue the sampling until the 'replicateCount' for each class label is reached.</p>
 
 </div>
 </div>
@@ -17966,7 +17902,7 @@ Loading done.
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><font color='blue'>Display one of the images in each class label of the generated training set.</font></p>
+<p>Display one of the images in each class label of the generated training set.</p>
 
 </div>
 </div>
@@ -19767,7 +19703,7 @@ AElFTkSuQmCC
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><font color='blue'>Concatenate the original training set and the generated training set.</font></p>
+<p>Concatenate the original training set and the generated training set.</p>
 
 </div>
 </div>
@@ -19812,7 +19748,7 @@ y_trainConcat shape: 86466
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><font color='blue'>Visualize in sample size of each class label in the augmented training set.</font></p>
+<p>Visualize in sample size of each class label in the augmented training set.</p>
 
 </div>
 </div>
@@ -20508,11 +20444,7 @@ sets imply underfitting. A high accuracy on the training set but low accuracy on
 <div class="prompt input_prompt">In&nbsp;[38]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">### Train your model here.</span>
-<span class="c1">### Calculate and report the accuracy on the training and validation set.</span>
-<span class="c1">### Once a final model architecture is selected, </span>
-<span class="c1">### the accuracy on the test set should be calculated and reported as well.</span>
-<span class="k">def</span> <span class="nf">evaluate_loss</span><span class="p">(</span><span class="n">X_data</span><span class="p">,</span> <span class="n">y_data</span><span class="p">,</span> <span class="n">step</span><span class="p">):</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">evaluate_loss</span><span class="p">(</span><span class="n">X_data</span><span class="p">,</span> <span class="n">y_data</span><span class="p">,</span> <span class="n">step</span><span class="p">):</span>
     <span class="n">num_examples</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">X_data</span><span class="p">)</span>
     <span class="n">total_loss</span> <span class="o">=</span> <span class="mi">0</span>
     <span class="n">sess</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">get_default_session</span><span class="p">()</span>
@@ -20877,7 +20809,7 @@ Total training time = 189 min 30.8 sec
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><font color='blue'>Visualize the hyperparameter tuning result.</font></p>
+<p>List the hyperparameter tuning result.</p>
 
 </div>
 </div>
@@ -21941,9 +21873,7 @@ Test Fscore: 0.9837
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <hr>
-<h2 id="Step-3:-Test-a-Model-on-New-Images">Step 3: Test a Model on New Images<a class="anchor-link" href="#Step-3:-Test-a-Model-on-New-Images">&#182;</a></h2><p>To give yourself more insight into how your model is working, download at least five pictures of German traffic signs from the web and use your model to predict the traffic sign type.</p>
-<p>You may find <code>signnames.csv</code> useful as it contains mappings from the class id (integer) to the actual sign name.</p>
-
+<h2 id="Step-3:-Test-a-Model-on-New-Images">Step 3: Test a Model on New Images<a class="anchor-link" href="#Step-3:-Test-a-Model-on-New-Images">&#182;</a></h2>
 </div>
 </div>
 </div>
@@ -21960,10 +21890,7 @@ Test Fscore: 0.9837
 <div class="prompt input_prompt">In&nbsp;[51]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">### Load the images and plot them here.</span>
-<span class="c1">### Feel free to use as many code cells as needed.</span>
-
-<span class="n">image_path</span><span class="o">=</span><span class="s1">&#39;./test-images&#39;</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">image_path</span><span class="o">=</span><span class="s1">&#39;./test-images&#39;</span>
 <span class="n">files</span><span class="o">=</span><span class="p">[]</span>
 <span class="k">for</span> <span class="n">f</span> <span class="ow">in</span> <span class="n">listdir</span><span class="p">(</span><span class="n">image_path</span><span class="p">):</span>
     <span class="n">name</span><span class="p">,</span> <span class="n">ext</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">splitext</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
@@ -25441,7 +25368,7 @@ OIdE2BMEQRAEQRAEQTiHRNgTBEEQBEEQBEE4h/4v7AxpKC5TbjYAAAAASUVORK5CYII=
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><font color='blue'>Load the label names for all 43 labels for prediction visualization.</font></p>
+<p>Load the label names for all 43 labels for prediction visualization.</p>
 
 </div>
 </div>
@@ -25667,7 +25594,7 @@ OIdE2BMEQRAEQRAEQTiHRNgTBEEQBEEQBEE4h/4v7AxpKC5TbjYAAAAASUVORK5CYII=
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><font color='blue'>Load the ground truth label index for the 5 new test images.</font></p>
+<p>Load the ground truth label index for the 5 new test images.</p>
 
 </div>
 </div>
@@ -25744,7 +25671,7 @@ OIdE2BMEQRAEQRAEQTiHRNgTBEEQBEEQBEE4h/4v7AxpKC5TbjYAAAAASUVORK5CYII=
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><font color='blue'>Pass the new test images through the image preprocessing pipeline.</font></p>
+<p>Pass the new test images through the image preprocessing pipeline.</p>
 
 </div>
 </div>
@@ -25812,7 +25739,7 @@ Loading done.
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><font color='blue'>Visualize the preprocessed test images with their respective label.</font></p>
+<p>Visualize the preprocessed test images with their respective label.</p>
 
 </div>
 </div>
@@ -26269,7 +26196,7 @@ AMCMyAEAAMyIHAAAwIzIAQAAzIgcAADATHg142ERGtqBAAAAAElFTkSuQmCC
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><font color='blue'>Perform prediction with the model.</font></p>
+<p>Perform prediction with the model.</p>
 
 </div>
 </div>
@@ -26481,34 +26408,7 @@ AMCMyAEAAMyIHAAAwIzIAQAAzIgcAADATHg142ERGtqBAAAAAElFTkSuQmCC
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>For each of the new images, print out the model's softmax probabilities to show the <strong>certainty</strong> of the model's predictions (limit the output to the top 5 probabilities for each image). <a href="https://www.tensorflow.org/versions/r0.12/api_docs/python/nn.html#top_k"><code>tf.nn.top_k</code></a> could prove helpful here.</p>
-<p>The example below demonstrates how tf.nn.top_k can be used to find the top k predictions for each image.</p>
-<p><code>tf.nn.top_k</code> will return the values and indices (class ids) of the top k predictions. So if k=3, for each sign, it'll return the 3 largest probabilities (out of a possible 43) and the correspoding class ids.</p>
-<p>Take this numpy array as an example. The values in the array represent predictions. The array contains softmax probabilities for five candidate images with six possible classes. <code>tf.nn.top_k</code> is used to choose the three classes with the highest probability:</p>
-
-<pre><code># (5, 6) array
-a = np.array([[ 0.24879643,  0.07032244,  0.12641572,  0.34763842,  0.07893497,
-         0.12789202],
-       [ 0.28086119,  0.27569815,  0.08594638,  0.0178669 ,  0.18063401,
-         0.15899337],
-       [ 0.26076848,  0.23664738,  0.08020603,  0.07001922,  0.1134371 ,
-         0.23892179],
-       [ 0.11943333,  0.29198961,  0.02605103,  0.26234032,  0.1351348 ,
-         0.16505091],
-       [ 0.09561176,  0.34396535,  0.0643941 ,  0.16240774,  0.24206137,
-         0.09155967]])</code></pre>
-<p>Running it through <code>sess.run(tf.nn.top_k(tf.constant(a), k=3))</code> produces:</p>
-
-<pre><code>TopKV2(values=array([[ 0.34763842,  0.24879643,  0.12789202],
-       [ 0.28086119,  0.27569815,  0.18063401],
-       [ 0.26076848,  0.23892179,  0.23664738],
-       [ 0.29198961,  0.26234032,  0.16505091],
-       [ 0.34396535,  0.24206137,  0.16240774]]), indices=array([[3, 0, 5],
-       [0, 1, 4],
-       [0, 5, 1],
-       [1, 3, 5],
-       [1, 4, 3]], dtype=int32))</code></pre>
-<p>Looking just at the first row we get <code>[ 0.34763842,  0.24879643,  0.12789202]</code>, you can confirm these are the 3 largest probabilities in <code>a</code>. You'll also notice <code>[3, 0, 5]</code> are the corresponding indices.</p>
+<p>For each of the new images, print out the model's softmax probabilities to show the <strong>certainty</strong> of the model's predictions (the output is limited to the top 5 probabilities for each image).</p>
 
 </div>
 </div>
@@ -26604,7 +26504,7 @@ Top 5 indices:
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><font color='blue'>Visualize the top 5 predictions result.</font></p>
+<p>Visualize the top 5 predictions result.</p>
 
 </div>
 </div>
@@ -39338,39 +39238,8 @@ YII=
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Project-Writeup">Project Writeup<a class="anchor-link" href="#Project-Writeup">&#182;</a></h3><p>Once you have completed the code implementation, document your results in a project writeup using this <a href="https://github.com/udacity/CarND-Traffic-Sign-Classifier-Project/blob/master/writeup_template.md">template</a> as a guide. The writeup can be in a markdown or pdf file.</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<blockquote><p><strong>Note</strong>: Once you have completed all of the code implementations and successfully answered each question above, you may finalize your work by exporting the iPython Notebook as an HTML document. You can do this by using the menu above and navigating to  \n",
-    "<strong>File -&gt; Download as -&gt; HTML (.html)</strong>. Include the finished document along with this notebook as your submission.</p>
-</blockquote>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
 <hr>
-<h2 id="Step-4-(Optional):-Visualize-the-Neural-Network's-State-with-Test-Images">Step 4 (Optional): Visualize the Neural Network's State with Test Images<a class="anchor-link" href="#Step-4-(Optional):-Visualize-the-Neural-Network's-State-with-Test-Images">&#182;</a></h2><p>This Section is not required to complete but acts as an additional excersise for understaning the output of a neural network's weights. While neural networks can be a great learning device they are often referred to as a black box. We can understand what the weights of a neural network look like better by plotting their feature maps. After successfully training your neural network you can see what it's feature maps look like by plotting the output of the network's weight layers in response to a test stimuli image. From these plotted feature maps, it's possible to see what characteristics of an image the network finds interesting. For a sign, maybe the inner network feature maps react with high activation to the sign's boundary outline or to the contrast in the sign's painted symbol.</p>
-<p>Provided for you below is the function code that allows you to get the visualization output of any tensorflow weight layer you want. The inputs to the function should be a stimuli image, one used during training or a new one you provided, and then the tensorflow variable name that represents the layer's state during the training process, for instance if you wanted to see what the <a href="https://classroom.udacity.com/nanodegrees/nd013/parts/fbf77062-5703-404e-b60c-95b78b2f3f9e/modules/6df7ae49-c61c-4bb2-a23e-6527e69209ec/lessons/601ae704-1035-4287-8b11-e2c2716217ad/concepts/d4aca031-508f-4e0b-b493-e7b706120f81">LeNet lab's</a> feature maps looked like for it's second convolutional layer you could enter conv2 as the tf_activation variable.</p>
-<p>For an example of what feature map outputs look like, check out NVIDIA's results in their paper <a href="https://devblogs.nvidia.com/parallelforall/deep-learning-self-driving-cars/">End-to-End Deep Learning for Self-Driving Cars</a> in the section Visualization of internal CNN State. NVIDIA was able to show that their network's inner weights had high activations to road boundary lines by comparing feature maps from an image with a clear path to one without. Try experimenting with a similar test to show that your trained network's weights are looking for interesting features, whether it's looking at differences in feature maps from images with or without a sign, or even what feature maps look like in a trained network vs a completely untrained one on the same sign image.</p>
-<p><figure>
- <img src="visualize_cnn.png" width="380" alt="Combined Image" />
- <figcaption>
- <p></p> 
- <p style="text-align: center;"> Your output should look something like this (above)</p> 
- </figcaption>
-</figure>
- <p></p></p>
-
+<h2 id="Step-4:-Visualize-the-Neural-Network's-State-with-Test-Images">Step 4: Visualize the Neural Network's State with Test Images<a class="anchor-link" href="#Step-4:-Visualize-the-Neural-Network's-State-with-Test-Images">&#182;</a></h2>
 </div>
 </div>
 </div>
@@ -39379,27 +39248,17 @@ YII=
 <div class="prompt input_prompt">In&nbsp;[64]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">### Visualize your network&#39;s feature maps here.</span>
-<span class="c1">### Feel free to use as many code cells as needed.</span>
-
-<span class="c1"># image_input: the test image being fed into the network to produce the feature maps</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># image_input: the test image being fed into the network to produce the feature maps</span>
 <span class="c1"># tf_activation: should be a tf variable name used during your training procedure that </span>
-<span class="c1"># represents the calculated state of a specific weight layer</span>
+<span class="c1">#                represents the calculated state of a specific weight layer</span>
 <span class="c1"># activation_min/max: can be used to view the activation contrast in more detail, </span>
-<span class="c1"># by default matplot sets min and max to the actual min and max values of the output</span>
+<span class="c1">#                   by default matplot sets min and max to the actual min and max </span>
+<span class="c1">#                   values of the output</span>
 <span class="c1"># plt_num: used to plot out multiple different weight feature map sets on the same block, </span>
-<span class="c1"># just extend the plt number for each new feature map entry</span>
+<span class="c1">#          just extend the plt number for each new feature map entry</span>
 
 <span class="k">def</span> <span class="nf">outputFeatureMap</span><span class="p">(</span><span class="n">image_input</span><span class="p">,</span> <span class="n">tf_activation</span><span class="p">,</span> <span class="n">activation_min</span><span class="o">=-</span><span class="mi">1</span><span class="p">,</span> <span class="n">activation_max</span><span class="o">=-</span><span class="mi">1</span><span class="p">,</span>
                      <span class="n">plt_num</span><span class="o">=</span><span class="mi">1</span><span class="p">):</span>
-    <span class="c1"># Here make sure to preprocess your image_input in a way your network expects</span>
-    <span class="c1"># with size, normalization, ect if needed</span>
-    <span class="c1"># image_input =</span>
-    <span class="c1"># Note: x should be the same name as your network&#39;s tensorflow data placeholder variable</span>
-    <span class="c1"># If you get an error tf_activation is not defined it may be having trouble accessing </span>
-    <span class="c1"># the variable from inside a function</span>
-    
-    <span class="c1">#activation = tf_activation.eval(session=sess,feed_dict={x : image_input})</span>
     <span class="n">sess</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">get_default_session</span><span class="p">()</span>
     <span class="n">activation</span> <span class="o">=</span> <span class="n">sess</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">tf_activation</span><span class="p">,</span>\
                           <span class="n">feed_dict</span><span class="o">=</span><span class="p">{</span><span class="n">x</span> <span class="p">:</span> <span class="n">image_input</span><span class="p">,</span> \
