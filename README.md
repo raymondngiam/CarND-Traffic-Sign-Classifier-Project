@@ -4,6 +4,8 @@
 ### Overview
 This is a project for Udacity's Self Driving Car Nanodegree. The objective is to train a  convolutional neural network for classification of traffic signs.
 
+![Screenshot](/images/Screenshot.png)
+
 ### Final report
 You can view the final report of this project at [writeup.pdf](https://github.com/raymondngiam/CarND-Traffic-Sign-Classifier-Project/blob/master/writeup.pdf).
 
